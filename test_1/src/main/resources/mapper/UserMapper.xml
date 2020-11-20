@@ -13,5 +13,12 @@
         FROM "user"
     </select>
 
+    <select id="getUserByUsernameAndPassword" resultMap="BaseResultMap">
+        SELECT
+        *
+        FROM "user"
+        WHERE "user_name" = #{username} AND "user_password" = #{password}
+    </select>
+
 
 </mapper>

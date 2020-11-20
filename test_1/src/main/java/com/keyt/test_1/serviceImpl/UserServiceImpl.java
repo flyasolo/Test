@@ -19,4 +19,9 @@ public class UserServiceImpl implements UserService {
     public List<UserBean> getAllUser() {
         return userMapper.getAllUser();
     }
+
+    @Override
+    public UserBean getUserByUsernameAndPassword(String username, String password) {
+        return userMapper.getUserByUsernameAndPassword(username,password);
+    }
 }
