@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.keyt.test_1.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.keyt.test_1.bean.UserBean">
+        <id column="user_id" jdbcType="VARCHAR" property="userId" />
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="user_password" jdbcType="VARCHAR" property="userPassword"/>
+    </resultMap>
+
+    <select id="getAllUser" resultMap="BaseResultMap">
+        SELECT
+        *
+        FROM "user"
+    </select>
+
+
+</mapper>
