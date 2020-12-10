@@ -12,25 +12,28 @@
             <label>用户名</label>
         </a>
         <a>
-            <input id="username" content="请输入用户名" type="text" name="userName">
+            <input id="username" placeholder="请输入用户名" type="text" name="userName">
         </a>
         <br/>
         <a style="color: black">
             <label>密码</label>
         </a>
         <a>
-            <input id="password" content="请输入密码" type="text" name="userPassword">
+            <input id="password" placeholder="请输入密码" type="text" name="userPassword">
         </a>
 
+        <div>
+            <input id="code" placeholder="验证码" type="text" class="" style="width:170px">
+            <!-- 验证码 显示 -->
+            <img onclick="javascript:getvCode()" id="verifyimg" style="margin-left: 20px;"/>
+        </div>
         <button class="button" type="submit" content="登录" >登录</button>
+        <a href="/login/toRegister">
+            <button class="button" type="button" content="注册" >登录</button>
+        </a>
+
     </form>
 
-    <div>
-        <input id="code" placeholder="验证码" type="text" class=""
-               style="width:170px">
-        <!-- 验证码 显示 -->
-        <img onclick="javascript:getvCode()" id="verifyimg" style="margin-left: 20px;"/>
-    </div>
 
     <script type="text/javascript">
         getvCode();

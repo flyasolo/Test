@@ -24,4 +24,11 @@ public class UserServiceImpl implements UserService {
     public UserBean getUserByUsernameAndPassword(String username, String password) {
         return userMapper.getUserByUsernameAndPassword(username,password);
     }
+
+    @Override
+    public Integer createUser(UserBean userBean) {
+        return userMapper.createUser(userBean);
+    }
+
+
 }

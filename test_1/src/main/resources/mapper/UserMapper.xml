@@ -20,5 +20,10 @@
         WHERE "user_name" = #{username} AND "user_password" = #{password}
     </select>
 
+    <insert id="createUser" parameterType="com.keyt.test_1.bean.UserBean">
+        INSERT INTO
+        "user"(user_id,user_name,user_password)
+        VALUES (#{userId},#{userName},#{userPassword})
+    </insert>
 
 </mapper>

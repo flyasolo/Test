@@ -10,4 +10,6 @@ public interface UserService {
     List<UserBean> getAllUser();
 
     UserBean getUserByUsernameAndPassword(String username,String password);
+
+    Integer createUser(UserBean userBean);
 }

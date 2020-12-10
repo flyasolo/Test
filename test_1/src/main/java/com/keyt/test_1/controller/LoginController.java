@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.UUID;
 
 @Controller
 @RequestMapping(value = "login")
@@ -57,4 +58,19 @@ public class LoginController {
         }
         else return "";
     }
+
+    @RequestMapping(value = "toRegister")
+    public String toRegister(){
+        return "register";
+    }
+
+    @RequestMapping(value = "register")
+    public String createUser(UserBean userBean){
+        String user_id = UUID.randomUUID().toString();
+        userBean.setUserId(user_id);
+        Integer i = userService.createUser(userBean);
+        if (i>0) return "redirect:/user/allUserList";
+        return "";
+    }
+
 }

@@ -13,4 +13,6 @@ public interface UserMapper {
     List<UserBean> getAllUser();
 
     UserBean getUserByUsernameAndPassword(@Param("username")String username,@Param("password")String password);
+
+    Integer createUser(UserBean userBean);
 }
